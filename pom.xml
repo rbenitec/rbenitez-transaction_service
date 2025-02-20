@@ -5,16 +5,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.7</version>
+		<version>2.7.10</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>pract</groupId>
-	<artifactId>employee-msservice</artifactId>
+	<groupId>service</groupId>
+	<artifactId>transaction-msservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>employee-msservice</name>
-	<description>employee project msservice</description>
+	<name>transaction-msservice</name>
+	<description>transaction project msservice</description>
 	<properties>
 		<java.version>11</java.version>
+		<spring-cloud.version>2021.0.2</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -41,7 +42,27 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bootstrap</artifactId>
+		</dependency>
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>

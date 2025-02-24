@@ -1,6 +1,7 @@
 package service.transactions.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,10 +11,11 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @ToString
 public class TransactionResponseDto {
-    private String idTransaction;
-    private String idAccount;
+    private String transactionId;
+    private String productId;
     private Double amount;
     private String typeTransaction;
     private String dateTransaction;

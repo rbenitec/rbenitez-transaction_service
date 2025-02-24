@@ -9,6 +9,12 @@ spring:
   data:
     mongodb:
       uri: "mongodb+srv://m001-estudiante:rjbc2095@sandbox.ymd2iym.mongodb.net/rbenitez_banking?retryWrites=true&w=majority&appName=Sandbox"
+  config:
+    client:
+      account:
+        url: "http://localhost:9091"
+      credit:
+        url: "http://localhost:9090"
 #server:
 #  port: 8082
 logging:

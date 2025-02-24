@@ -6,11 +6,12 @@ import service.transactions.model.Client;
 import service.transactions.repository.TransactionsRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import service.transactions.service.TransactionsService;
+import service.transactions.service.StrategyTransactionsService;
 
 @Service
-public class TransactionsServiceImpl implements TransactionsService {
+public class StrategyTransactionsServiceImpl {
 
+    /*
     @Autowired
     TransactionsRepository transactionsRepository;
 
@@ -38,6 +39,8 @@ public class TransactionsServiceImpl implements TransactionsService {
     public Mono<Void> delete(String id) {
         return transactionsRepository.deleteById(id);
     }
+
+     */
 
 
 }

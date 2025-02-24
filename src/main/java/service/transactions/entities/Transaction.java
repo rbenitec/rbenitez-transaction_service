@@ -14,11 +14,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "customer")
+@Document(collection = "transaction")
 public class Transaction {
     @Id
     private String idTransaction;
-    private String idAccount;
+    private String idProduct;
     private Double amount;
     private String typeTransaction;
     private String dateTransaction;

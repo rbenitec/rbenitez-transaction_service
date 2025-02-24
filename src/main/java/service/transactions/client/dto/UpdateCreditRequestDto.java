@@ -1,17 +1,20 @@
-package service.transactions.dto;
+package service.transactions.client.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
 @Setter
-@NoArgsConstructor
+@Getter
 @AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @ToString
-public class TransactionRequestDto {
-    private String productId;
+public class UpdateCreditRequestDto {
     private Double amount;
+    private Double interestRate;
+    private Integer termMonths;
 }

@@ -4,14 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-@ToString
-public class TransactionRequestDto {
-    private String productId;
-    private Double amount;
+@NoArgsConstructor
+public class ErrorDto {
+    private int status;
+    private String title;
+    private String detail;
+    private String url;
 }

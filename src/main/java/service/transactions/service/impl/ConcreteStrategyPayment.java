@@ -1,17 +1,15 @@
 package service.transactions.service.impl;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
-import service.transactions.client.AccountClientConnector;
 import service.transactions.client.CreditClientConnector;
-import service.transactions.client.dto.CreditServiceResponseDto;
 import service.transactions.client.dto.UpdateCreditRequestDto;
 import service.transactions.dto.TransactionRequestDto;
 import service.transactions.dto.TransactionResponseDto;
 import service.transactions.entities.Transaction;
 import service.transactions.mapper.MapperToTransactionResponse;
+import service.transactions.model.TransactionType;
 import service.transactions.repository.TransactionsRepository;
 import service.transactions.service.StrategyTransactionsService;
 import service.transactions.util.Utility;
@@ -47,5 +45,10 @@ public class ConcreteStrategyPayment implements StrategyTransactionsService {
                                         .map(mapperToTransactionResponse);
                             });
                 }));
+    }
+
+    @Override
+    public TransactionType getTransactionType() {
+        return TransactionType.PAYMENT;
     }
 }

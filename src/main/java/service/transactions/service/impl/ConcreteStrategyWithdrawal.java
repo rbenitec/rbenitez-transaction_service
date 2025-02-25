@@ -10,6 +10,7 @@ import service.transactions.dto.TransactionResponseDto;
 import service.transactions.entities.Transaction;
 import service.transactions.exception.BusinessException;
 import service.transactions.mapper.MapperToTransactionResponse;
+import service.transactions.model.TransactionType;
 import service.transactions.repository.TransactionsRepository;
 import service.transactions.service.StrategyTransactionsService;
 import service.transactions.util.Utility;
@@ -47,5 +48,10 @@ public class ConcreteStrategyWithdrawal implements StrategyTransactionsService {
                                                 .map(mapperToTransactionResponse);
                                     });
                         }));
+    }
+
+    @Override
+    public TransactionType getTransactionType() {
+        return TransactionType.WITHDRAWAL;
     }
 }
